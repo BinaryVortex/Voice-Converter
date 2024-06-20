@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:linear-gradient(#2d9af9,#4534fe)
+  }
+  
+  .wrapper {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper header {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #initialSelection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  #convertToVoiceBtn,
+  #voiceToTextBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3727e8;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #convertToVoiceBtn:hover,
+  #voiceToTextBtn:hover {
+    background-color: #4534fe;
+  }
+  
+  .wrapper form {
+    margin-bottom: 20px;
+  }
+  
+  form .row {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  
+  form .row label {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  form :where(textarea, select, button) {
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  form .row textarea {
+    resize: none;
+    height: 110px;
+    font-size: 15px;
+    padding: 8px 10px;
+    border: 1px solid #999;
+  }
+  
+  form .row textarea::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  form .row .outer {
+    height: 47px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    border: 1px solid #999;
+  }
+  
+  form .row select {
+    font-size: 14px;
+    background: none;
+  }
+  
+  form .row select::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  form .row select::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  form .row select::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+    border-right: 2px solid #ffffff;
+  }
+  
+  form button {
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+    background: #3727e8;
+    transition: 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #4534fe;
+  }
+  
+  #backBtn1, #backBtn2 {
+    background-color: #888; /* Different color for the back button */
+  }
+  
+  #backBtn1:hover, #backBtn2:hover {
+    background-color: #4534fe;
+  }
+  
+  form#voiceToTextForm {
+    display: none;
+    margin-top: 20px;
+    padding-top: 10px;
+  }
+  
+  #voiceToTextHeader {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  @media (max-width: 600px) {
+    .wrapper {
+      padding: 20px;
+    }
+    
+    .wrapper header {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    #initialSelection {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    #convertToVoiceBtn,
+    #voiceToTextBtn {
+      padding: 12px 25px;
+      font-size: 16px;
+    }
+  }

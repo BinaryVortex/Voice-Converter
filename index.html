@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="wrapper">
+    <header id="mainHeader">Voice Converter</header>
+    
+    <!-- Initial Selection Buttons -->
+    <div id="initialSelection">
+        <button id="convertToVoiceBtn">Text to Voice</button>
+        <button id="voiceToTextBtn">Voice to Text</button>
+    </div>
+    
+    <!-- Convert to Voice Form -->
+    <form id="convertToVoiceForm" style="display:none;">
+        <div class="row">
+            <label for="textInput">Enter Text</label>
+            <textarea id="textInput"></textarea>
+        </div>
+        <div class="row">
+            <label for="voiceSelect">Select Voice</label>
+            <div class="outer">
+                <select id="voiceSelect"></select>
+            </div>
+        </div>
+        <button id="speechBtn">Convert To Voice</button>
+        <button id="backBtn1" type="button">Back</button> <!-- Added back button -->
+    </form>
+    
+    <!-- Voice to Text Form -->
+    <form id="voiceToTextForm" style="display:none;">
+        <div class="row">
+            <header id="voiceToTextHeader">Voice To Text Converter</header>
+            <label for="voiceInput">Speak Now</label>
+            <textarea id="voiceInput" readonly></textarea>
+        </div>
+        <button id="startVoiceToTextBtn" type="button">Start Speaking</button>
+        <button id="backBtn2" type="button">Back</button> <!-- Added back button -->
+    </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
